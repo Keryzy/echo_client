@@ -1,18 +1,20 @@
-#include <iostream>
-#include <thread>
-#include <mutex>
-#include <vector>
-#include <string>
-#include <cstring>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 #ifdef __linux__
 #include <arpa/inet.h>
 #include <sys/socket.h>
-#endif
+#endif // __linux
 #ifdef WIN32
 #include <winsock2.h>
 #include "../mingw_net.h"
-#endif
+#endif // WIN32
+#include <thread>
+#include <vector>
+#include <algorithm>
+#include <mutex>
+#include <iostream>
 
 
 #ifdef WIN32
